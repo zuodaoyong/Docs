@@ -1,0 +1,47 @@
+Hadoop Common
+
+从Hadoop 0.20版本开始，原来Hadoop项目的Core部分更名为Hadoop Common。Common为Hadoop的其他项目提供了一些常用工具，主要包括系统配置工具Configuration、远程过程调用RPC、序列化机制和Hadoop抽象文件系统FileSystem等。它们为在通用硬件上搭建云计算环境提供基本的服务，并为运行在该平台上的软件开发提供了所需的API。
+
+HDFS
+
+Hadoop生态系统的基础组件是Hadoop分布式文件系统(HDFS)。HDFS的机制是将大量数据分布到计算机集群上，数据一次写入，但可以多次读取用于分析。它是其他一些工具的基础，例如HBase。
+
+MapReduce
+
+Hadoop的主要执行框架即MapReduce，它是一个用于分布式并行数据处理的编程模型，将作业分为mapping阶段和reduce阶段(因此而得名)。开发人员为Hadoop编写MapReduce作业，并使用HDFS中存储的数据，而HDFS可以保证快速的数据访问。鉴于MapReduce作业的特性，Hadoop以并行的方式将处理过程移向数据，从而实现快速处理。
+
+HBase
+
+一个构建在HDFS之上的面向列的NoSQL数据库，HBase用于对大量数据进行快速读取/写入。HBase将Zookeeper用于自身的管理，以保证其所有组件都正在运行。
+
+Zookeeper
+
+Zookeeper是Hadoop的分布式协调服务。Zookeeper被设计成可以在机器集群上运行，是一个具有高度可用性的服务，用于Hadoop操作的管理，而且很多Hadoop组件都依赖它。
+
+Oozie
+
+一个可扩展的Workflow系统，Oozie已经被集成到Hadoop软件栈中，用于协调多个MapReduce作业的执行。它能够处理大量的复杂性，基于外部事件(包括定时和所需数据是否存在)来管理执行。
+
+Pig
+
+对MapReduce编程复杂性的抽象，Pig平台包含用于分析Hadoop数据集的执行环境和脚本语言(Pig Latin)。它的编译器将Pig Latin翻译为MapReduce程序序列。
+
+Hive
+
+类似于SQL的高级语言，用于执行对存储在Hadoop中数据的查询，Hive允许不熟悉MapReduce的开发人员编写数据查询语句，它会将其翻译为Hadoop中的MapReduce作业。类似于Pig，Hive是一个抽象层，但更倾向于面向较熟悉SQL而不是Java编程的数据库分析师。
+
+Sqoop
+
+是一个连通性工具，用于在关系型数据库和数据仓库与Hadoop之间移动数据。Sqoop利用数据库来描述导入/导出数据的模式，并使用MapReduce实现并行操作和容错。
+
+Flume
+
+是一个分布式的、具有可靠性和高可用性的服务，用于从单独的机器上将大量数据高效地收集、聚合并移动到HDFS中。它基于一个简单灵活的架构，提供流式数据操作。它借助于简单可扩展的数据模型，允许将来自企业中多台机器上的数据移至Hadoop。
+
+Mahout
+
+一个机器学习和数据挖掘的库，提供用于聚类、回归测试和统计建模常见算法的MapReduce实现。
+
+Ambari
+
+该项目致力于简化Hadoop的管理，提供对Hadoop集群进行供应、管理和监控的支持。
