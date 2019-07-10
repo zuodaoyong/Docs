@@ -1,6 +1,10 @@
 Java中Synchronized的用法:
 https://blog.csdn.net/luoweifu/article/details/46613015
+Java中的锁原理、锁优化、CAS、AQS详解！
+https://cloud.tencent.com/developer/article/1447796
 详解synchronized与Lock的区别与使用:
 https://blog.csdn.net/u012403290/article/details/64910926
 线程池
 https://cloud.tencent.com/developer/article/1141455
+CopyOnWriteArrayList
+https://www.cnblogs.com/xrq730/p/5020760.html
