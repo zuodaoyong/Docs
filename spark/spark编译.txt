@@ -1,0 +1,5 @@
+spark的两种编译方式:
+1、
+./build/mvn -Pyarn -Phadoop-2.7 -Dhadoop.version=2.7.5 -Phive -Phive-thriftserver -Pscala-2.12 -DskipTests clean package
+2、
+./dev/make-distribution.sh --name 2.7.5 --tgz -Pyarn -Phadoop-2.7 -Dhadoop.version=2.7.5 -Phive -Phive-thriftserver -Pscala-2.12
